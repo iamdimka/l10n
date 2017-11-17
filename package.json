@@ -1,0 +1,23 @@
+{
+  "name": "@iamdimka/l10n",
+  "version": "0.1.0",
+  "description": "Little localization lib",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "prepare": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamdimka/l10n.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamdimka/l10n/issues"
+  },
+  "homepage": "https://github.com/iamdimka/l10n#readme",
+  "devDependencies": {
+    "@types/node": "^8.0.53"
+  }
+}
