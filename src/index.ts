@@ -1,4 +1,4 @@
-export function translate(dict: { [key: string]: string }, key: string, vars: { [key: string]: string | number }) {
+export function translate(dict: { [key: string]: string }, key: string, vars: { [key: string]: string | number } = {}) {
   let result = dict[key]
 
   if (!result) {
@@ -6,7 +6,7 @@ export function translate(dict: { [key: string]: string }, key: string, vars: { 
   }
 
   return result
-    .replace(/\[@([a-z0-9_]+)\|(.+?)]/ig, (found, key, choices) => plural(dict._code, vars[key] as number || 0, choices.split("|")))
+    .replace(/\[@([a-z0-9_]+)\|(.+?)]/ig, (found, key, choices) => plural(dict.code, vars[key] as number || 0, choices.split("|")))
     .replace(/@([a-z0-9_]+)/ig, (found, key) => vars[key] as string)
 }
 
